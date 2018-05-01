@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+	{% if error %}
+	<h1 class = "jumbotron hdrs text-center"> OOPS! Something Went Wrong !</h1>
+	<p class = "timings"> Error : {{error}} </p>
+	{% else %}
+	<h1 class = "jumbotron hdrs text-center"> You Are Now In The Database !
+	<h4 class="timings"> Successfully Registered </h1>
+	<a href="{{url_for('hi')}}" class="btn btn-default">Go Home</a>
+	{% endif %}
+{% endblock %}

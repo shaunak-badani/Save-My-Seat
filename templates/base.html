@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css?family=Asap|Merriweather+Sans" rel="stylesheet">
+<html lang="en">
+<head>
+  <title>Save My Seat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static',filename = 'styles.css') }} ">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand nav-txt " href = "{{url_for('hi')}}"><span class="glyphicon glyphicon-envelope"></span> SMS : Save My Seat</span>
+        <!-- urlfor homepage -->
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a class = "nav-txt" href="{{url_for('show.display_movie')}}"><span class="glyphicon glyphicon-film"></span> Movies</a></li>
+      <!-- <li><a class = "nav-txt" href="#"><span class="glyphicon glyphicon-facetime-video"></span> Theatres</a></li> -->
+    </ul>
+    {% if 'username' not in session %}
+    <ul class="nav navbar-nav navbar-right">
+      <li class = "nav-txt"><a href="{{url_for('register')}}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li class = "nav-txt  "><a href="{{url_for('login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+    {% else %}
+    <ul class="nav navbar-nav navbar-right">
+      <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> {{ session['username']}} </a> </li> -->
+      <li class="dropdown nav-txt"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <span class="glyphicon glyphicon-user"></span> {{session['username']}}<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          {% if session['username'] == 'admin' %}
+          <li class="nav-txt"><a href="{{url_for('show.added_theatre')}}">Add Theatre</a></li>
+          <li class="nav-txt"><a href="{{url_for('added_movie')}}">Add Movie</a></li>
+          {% endif %}
+          <li class="nav-txt"><a href="{{url_for('show.bookings')}}">My Bookings</a></li>
+          <li class="nav-txt"><a href="{{url_for('logout')}}">Logout</a></li>
+        </ul>
+      </li>
+    {% endif %}
+  </div>
+</nav>
+  
+<div class="container">
+  {% block content %} 
+  {% endblock %}
+</div>
+
+</body>
+</html>

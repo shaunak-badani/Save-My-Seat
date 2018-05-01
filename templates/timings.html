@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+	<h1 class="jumbotron hdrs text-center"> Select a timing </h1>
+		{% for x in times %}
+		<div class = "col-md-4 clk">
+		<p class="timings"> {{x}} </p> 
+		<form action = "{{url_for('show.sc')}}" method = "post">
+			<input type = submit class = "tim-btn" name = "{{x}}" value = 'book'> 
+		</form>
+		</div>	
+
+		{% endfor %}
+{% endblock %}

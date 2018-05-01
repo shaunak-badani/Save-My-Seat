@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Abel|Skranji|Fira+Sans|Signika|Slabo+27px');
+.btns
+{
+	background-color:white;	
+	border : 2px solid #008CBA;
+	padding: 7px 14px 7px 14px;
+	margin-top : 4px ;
+	margin-left: auto;
+	border-radius: 20%;
+	transition : 0.3s;
+}
+.timings
+{
+	font-family: 'Abel',serif;
+	font-size:40px;
+}
+.clk
+{
+	margin-top:1.2vw;
+}
+.tim-btn
+{
+	padding:1vw 1vw 1vw 1vw;
+	background-color: #fff;
+	border : 2px solid #4CAF50;
+	border-radius: 50%;
+	transition: 0.3s;
+}
+.tim-btn:hover
+{
+	background-color: #4CAF50;
+	color: #fff;
+}
+.nav-txt
+{
+	font-size:20px;
+}
+.m-imgs
+{
+	max-width:137px;
+	max-height:195px;
+}
+.th-movie,.th-ticket
+{
+	font-family: 'Slabo 27px',serif;
+	margin-left : 150px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	max-width: 700px;
+	border : 0px;
+}
+.th-ticket
+{
+	max-width: 400px;
+	float : left;
+	font-size : 30px;
+}
+.btns:hover
+{
+	background-color:#008CBA;
+	color:white;
+}
+.hdrs
+{
+	font-family:'Bangers',cursive;
+}
+.caption-txt
+{
+	font-family:  'Fira Sans', sans-serif ;
+	font-size: 20px;	
+}
+table
+{
+	border:1px solid black;
+}
+tr,th
+{
+	padding : 0 0.5vw 0 0.5vw;
+}
+.trapezoid {
+	margin-top : 50px;
+	border-bottom: 80px solid rgba(166,166,166,0.5);
+	border-left: 400px solid transparent;
+	border-right: 400px solid transparent;
+	height: 0;
+	width: 1200px;
+}
+.screen-txt
+{
+	margin:30px;
+}
+.seat,.seat_taken,.booking
+{
+	background-color: rgba(128,0,128,0.5);
+    border: none;
+    padding: 0.7vw 1.4vw 0.7vw 0.7vw;
+    margin: 0.1vw 0.1vw 0.1vw 0.1vw;
+    text-align: center;
+    border-radius : 10% 10% 35% 35%;
+    -webkit-transition-duration : 0.9s;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.checkout-button
+{
+	border: 2px solid #4CAF50;
+	margin-top : 10px;
+	padding: 10px 10px 10px 10px;
+	background-color:#fff;
+	color: #4CAF50;
+	border-radius : 5%;
+	transition: 0.3s;		
+}
+
+.checkout-button:hover
+{
+	background-color: #4CAF50;
+	color:#fff;
+}
+
+.booking{
+	background-color: #0f0;
+}
+.checkout {
+  /*display: inline-block;*/
+  border-radius: 4px;
+  background-color: #ad0c12;
+  border: none;
+  color: #FFFFFF;
+  /*text-align: columns: enter;*/
+  font-size: 1vw;
+  padding: 10px;
+  width: 10vw;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.seat_taken
+{
+	background-color:#000;
+}
+.seat:hover
+{
+	background-color:#000;
+}
+table
+{
+	/*display: table;*/
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;
+}
+.card{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	max-width:300px;
+	transition:0.3s;
+	font-family: Abel;
+	margin:5%;
+
+}
+.card:hover{
+	box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+img{
+	border-radius: 5px 5px 0 0;
+}
+.container1{
+	padding:2px 16px;
+	text-align: center;
+
+}
+.container2{
+	padding:16px;
+	background-color: white;
+	font-size: 30px;
+	font-family: Skranji;
+}
+input[type=text],input[type=password],input[type=number]{
+	width:30%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	font-family: Skranji;
+	background: #f1f1f1;
+}
+input[type=text]:focus,input[type=password]:focus,input[type=number]:focus{
+	background-color: #ddd;
+	outline:none;
+}
+hr{
+	border:1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+.addbtn{
+	background-color: #4CAF50;
+	color: white;
+	padding: 16px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 10%;
+	font-family: Skranji;
+	opacity: 0.9;
+}
+.addbtn:hover{
+	opacity: 1;
+}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+	<link rel="stylesheet" type="text/css" href="../static/styles.css">
+	<form action = "{{url_for('show.added_theatre')}}" method = "POST">
+	<div class="container3">
+		Theatre:<br>
+		<input type="text" name = "theatre" placeholder="Name of the theatre"><br>
+		No of Screens:<br>
+		
+		<input type="number" name = "no_of_screens" placeholder="Total Screens"><br>
+	</div>
+		<input type="submit" class="addbtn" value = "Send Data" placeholder="Send">
+	</form>
+{% endblock %}

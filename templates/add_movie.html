@@ -1,0 +1,47 @@
+<link href="https://fonts.googleapis.com/css?family=Asap|Merriweather+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+{% extends 'base.html' %}
+{% block content %}
+<!-- <!Doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Movies</title>
+</head>
+<body>
+	<h1>Add a movie</h1>
+	<div> -->
+		<!-- <link rel="stylesheet" type="text/css" href = "../static/styles.css"> -->
+		<form action = "{{url_for('added_movie') }}" enctype="multipart/form-data" method ="POST">
+			<div class="container2">
+			Movie Name: <br>
+			<input type="text" name="name" placeholder="Name of the Movie" required><br>
+			Cast : <br> 
+			<input type="text" name="cast" placeholder="Cast" required><br>
+			Languages : <br> 
+			<input type="text" name="lang" placeholder = "Languages" required><br>
+			Genre:<br>
+			<input type="text" name="genre" placeholder= "Genre" required><br>
+			Rating:<br>
+			<input type="number" name="rating" placeholder = "Movie Rating "required><br>
+			Picture: <br>
+			<input type="file" name="pic" placeholder = "Poster" required><br>
+			Critic Rating : <br> 
+			<input type="number" name="c_rating" placeholder = "Critic Rating" required><br>
+			Avg Rating : <br> 
+			<input type="number" name="avg_rating" placeholder = "Avg Rating" required><br>
+			Release Date : <br>
+			<input type="text" name="release_date" placeholder = "Date of Release" required><br>
+			Duration : <br>
+			<input type="text" name="duration" placeholder = "Duration" required><br>
+			<br>
+		</div>
+			<button type="submit" class="addbtn">Add </button>
+		</form>
+{% endblock %}
+	<!-- </div>
+}
+</body>
+</html> -->

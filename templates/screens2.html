@@ -1,0 +1,47 @@
+<script type = "text/javascript" src = "{{url_for('static',filename = 'styles.js')}}"></script>
+<link rel = ""
+{% extends "base.html" %}
+{% block content %}
+	<h1 class = "jumbotron hdrs text-center"> Select your Favourite seats!</h1>
+	<center><table style = "width:10%; height:10%;">
+		{% for i in range(no_of_rows) %}
+		<tr>
+		<th> {{ "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[i] }} </th>
+		{% for j in range(no_of_columns) %}
+		{% if j == ((no_of_columns/3)|round|int) %}
+		<th> </th>
+		{% elif j == no_of_columns - ((no_of_columns/3)|round|int) %}
+		<th> </th>
+		{% endif %}
+			{% if (i,j) in taken %}
+		<th >
+			<!-- <form action = "#">  -->
+		 		<input class = "seat_taken" type="button" name = "{{i*no_of_columns+j}}">
+		 	<!-- </form> -->
+		</th>
+		{% elif (i,j) in seats %}
+		<th >
+			<!-- <form action = "#">  -->
+		 		<input class = "booking" type="button" name = "{{i*no_of_columns+j}}">
+		 	<!-- </form> -->
+		</th>
+		{% else %}
+		<th align = "right">
+			<!-- <form action = "{{url_for('show.screens')}}" method = "post">  -->
+		 		<input class = "seat" type = "submit" value = "" id = "{{i*no_of_columns + j}}" onclick = 'bookSeat({{i*no_of_columns + j}},{{no_of_columns}})' name ="{{i*no_of_columns+j}}"> 
+		 	<!-- </form> -->
+		 </th>
+		 {% endif %}
+		{% endfor %}
+		<th> {{"ABCDEFGHIJKLMNOPQRSTUVWXYZ"[i]}}
+		</tr>
+		{% endfor %}
+	</table>
+	<center>
+	<h1 class = "hdrs screen-txt"> All eyes this way please! </h1>
+	<div class="trapezoid"></div>	
+	<!-- <a href = "{{url_for('show.checkout')}}"> -->
+		<button class = "checkout-button" onclick = "sendData('http://127.0.0.1:5000/Checkout')" value = "" >Proceed to Checkout!</button>
+	<!-- </a> -->
+	</button>
+{% endblock %}

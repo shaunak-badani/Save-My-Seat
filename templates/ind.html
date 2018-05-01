@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class = "jumbotron align-middle" style="font-family:'Merriweather Sans',sans-serif " >
+    <h1>Save My Seat.
+      <br>
+      <small>Your one stop shop for booking tickets.</small>
+    </h1>
+</div>
+<div class="col-md-4">
+<div class="thumbnail">
+	<img src= "{{url_for('static',filename='cust.jpg')}}">
+	<div class="caption timings"> 
+		Ease of booking tickets as never experienced before!
+</div>
+</div>
+</div>
+<div class="col-md-4">
+	<div class="thumbnail">
+		<img src= "{{url_for('static',filename='cust.jpg')}}">
+			<div class="caption timings"> 
+				Movies renewed every day!
+		</div>
+	</div>
+</div>
+<div class="col-md-4">
+	<div class="thumbnail">
+		<img src= "{{url_for('static',filename='cust.jpg')}}">
+			<div class="caption timings"> 
+				Why bother going anywhere else?
+			</div>
+	</div>
+</div>
+{% endblock %}

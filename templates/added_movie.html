@@ -1,0 +1,20 @@
+<!Doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Movies</title>
+</head>
+<body>
+	<h1>These are movies,you'll get to see!</h1>
+	<div>
+		Added a new movie.
+		<form action = "{{ url_for('add_movie') }}">
+			<input type = "submit">Back </button>
+		</form>
+	{% for message in get_flashed_messages() %}
+		{{message}}
+	{% endfor %}	
+	</div>
+</body>
+</html>
+				

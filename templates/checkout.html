@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+	<h1 class = "jumbotron text-center hdrs"> 
+		Congrats! You have successfully booked your tickets!
+	</h1><center>
+	<div class = "card">
+		<img src= "{{url_for('static',filename = 'images/'+movie.img_link)}}" width="300px" >
+		<div class="container1">
+			<h3>Movie : {{ movie.name }}<br>
+					Theatre : {{ theatre.name }}<br>
+		Timing : {{ timing }} <br>
+		<!-- <p> Tickets booked : {{ n }} </p> -->
+		Tickets Booked  :
+			{% for x in b %}
+			{{x[0]}}{{x[1]}}&nbsp; 
+			{% endfor %}<h3>
+			
+	</div>
+	</div>
+</center>
+{% endblock %}

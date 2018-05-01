@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+	<h1 class ="jumbotron hdrs text-center">
+		Movie Selected : 
+	</h1>
+	<div class = "thumbnail" style="float:left">
+		<img class="m-imgs" src= "{{url_for('static',filename = 'images/'+movie.img_link)}}"> 
+	</div>
+	<div class="container">
+		<h1 class="th-movie"> {{movie.name}} </h1>
+		<h3 class = "th-movie"> Cast : {{movie.cast}} </h3>
+		<h3 class = "th-movie"> Languages : {{movie.lang}} </h3>
+	</div>
+	<h1 class ="jumbotron hdrs text-center">
+		Select Theatre:
+	</h1>	
+		{% for x in th %}
+		<p class = "timings"> {{ x.name }} </p>  
+		<form action = " {{ url_for('show.show_timings')}}" method = "post"> 
+			<input type = submit class = "tim-btn" name = "{{x.name}}" value = "Book">
+		</form>
+		{% endfor %}
+	</ul>
+{% endblock %}

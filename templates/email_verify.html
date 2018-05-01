@@ -1,0 +1,10 @@
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+<!-- <link rel="stylesheet" href="{{ url_for('static',filename = 'styles.css') }} "> -->
+{% extends "base.html" %}
+{% block content %}
+ <h1 class="jumbotron text-center hdrs">
+	<span class = "glyphicon glyphicon-lock"></span>
+ 	Woohoo! We have sent a very,very secret message to your mail. Please check your e-mail.
+ </h1>
+ <p class="timings"> You have been sent a token at your provided E-mail id. Please click on that token to complete registration. </p>
+{% endblock %}

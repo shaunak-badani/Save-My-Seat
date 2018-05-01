@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+	{% for x in seats %}
+	<div class="col-md-4">
+	<div class = "card " >
+		<img src= "{{url_for('static',filename = 'images/'+x[0].movie.img_link)}}" width="300px" >
+		<div class="container1">
+			<h3>Movie : {{ x[0].movie.name }}<br>
+					Theatre : {{ x[0].theatre.name }}<br>
+		<!-- Timing : {{ x[0].timing }} <br> -->
+		<!-- <p> Tickets booked : {{ n }} </p> -->
+		Tickets Booked  : <br>
+			{% for y in x %}
+			{{y.timing}}	{{"ABCDEFGHIJKLMNOPQRSTUVWXYZ"[y.row_no]}}{{y.column_no}} &nbsp; 
+			{% endfor %}
+		</h3>
+		</div>		
+	</div>
+	</div>
+	{% endfor %}
+{% endblock %}

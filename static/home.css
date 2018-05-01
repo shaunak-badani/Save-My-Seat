@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Montserrat|Patua+One');
+*
+{
+	margin :0;
+	padding:0;
+}
+
+body
+{
+	background : url("tickets-background-7.jpg") no-repeat left top;
+	background-size : cover;
+}
+.container
+{
+	margin : 0 auto;
+	/*padding : 0 0 0 0 ;*/
+	width:55vw;
+	height:55vw;
+	/*background : red;*/
+	position:relative;
+}
+.mains
+{
+	/* add background ticket image here */
+}
+nav>ul
+{
+	position:absolute;
+	top: 2vw;
+	right:-20vw;
+}
+nav>ul>li{	
+	list-style:none;
+	float : left;
+}
+nav>ul>li>a{
+	text-decoration : none;
+	font-family:Abel,sans-serif;
+	color:#fff;
+	font-size:2vw;
+	font-weight: bold;
+	padding:0 2vw 0 0 ;
+	/*transition: all .5s ease-in;*/
+}
+a:hover{
+	text-decoration:underline;
+}
+.wlcm
+{
+	color:#fff;
+	padding: 24vw 0 0 0;
+	font-family:'Patua One',cursive;
+	/*position:absolute;*/
+	font-size : 3.4vw;
+}

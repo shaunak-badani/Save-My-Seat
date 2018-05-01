@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1 class = "jumbotron text-center hdrs"> Movies </h1>
+			{% for m in movies %}
+			<div class="col-md-4">
+				<div class="thumbnail xtra">
+					<img class = "m-imgs" src= "{{url_for('static',filename = 'images/'+m.img_link)}}"> 
+						<div class="caption caption-txt">
+			 				<h1 class="text-center"> {{ m.name }} </h1> <br>
+			 				<h4> Cast : {{ m.cast }} </h4>
+			 				{% if m.c_rating != None %}
+			 				<h4> Critic's Rating : {{m.c_rating}} </h4>
+			 				{% endif %}
+							<form action = "{{ url_for ('show.show_theatres')}}" method = "post">
+								<input class="btns text-center" type = "submit" name = "{{m.name}}" value = "Book" >
+							</form>
+						</div>
+				</div>
+			</div>
+			{% endfor %}
+{% endblock %}
+	

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<style>
+body,html{
+  background-image: url('{{url_for('static',filename='cover.jpg')}}') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-container.card{
+  max-width: 500px;
+  padding: 40px 40px;
+}
+.btn{
+  font-weight: 700;
+  height:36px;
+  -moz-user-select:none;
+  -webkit-user-select:none;
+  user-select:none;
+  cursor:default;
+}
+.card{
+  background-color: #F7F7F7;
+  padding: 20px 25px 30px;
+  margin:5px auto 25px;
+  margin-top: :auto;
+  -moz-border-radius:2 px;
+  -webkit-border-radius:2px;
+  border-radius:2px;
+  -moz-box-shadow:0px 2px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow:0px 2px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.3)
+}
+.profile-img-card{
+  width:350px;
+  height:350px;
+  margin:0 auto 10px;
+  display: block;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  border-radius:50%;
+}
+.profile-name-card{
+  font-size:16px;
+  font-weight: bold;
+  text-align: center;
+  margin:auto 0 0;
+  min-height: 5px;
+}
+.reauth-email{
+   display: block;
+    color: #404040;
+    line-height: 5;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*.form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+   /* -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);*/
+
+.btn.btn-signin{
+  background-color: :rgb(104,145,162);
+  padding: 0px;
+  font-weight: 700;
+  font-size: 14px;
+  height:36px;
+   -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn-signin:focus{
+  background-color: rgb(12,97,33)
+}
+</style>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<body>
+<div class="container">
+  <div class="card card-container"><b><h1><center>Register</center></h1></b>
+    <img src="{{url_for('static',filename = 'seats.jpg')}}" id="profile-img" class="profile-img-card">
+    <p id="profile-name" class="profile-name-card">
+      <form class="form-signin" method = "post" action = "{{url_for('registered')}}">
+        <span id="reauth-email" class="reauth-email"></span>
+        Enter your Email-Id
+        <input type="email" id="inputemail" class="form-control" name = "e-mail" placeholder="Email Address">
+        Enter your Username
+        <input type="text" class="form-control" name = "username" placeholder="Username">
+        Enter Password
+        <input type="password" id="inputpassword" class="form-control" name = "password" placeholder="Password">
+        <button class="btn btn-lg-btn-primary btn-block btn-signin" type="submit">Sign in</button>
+      </form>
+  </div>
+</div>
+</body>
+</html>
+
