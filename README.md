@@ -11,4 +11,4 @@ pip3 install Flask_Uploads
 pip3 install flask_sqlalchemy
 pip3 install sqlalchemy
 pip3 install flask_mail
-pip3 insatll passlib
+pip3 install passlib
